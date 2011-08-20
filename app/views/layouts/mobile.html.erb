@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>Habittracker</title>
+	<link rel="stylesheet" href="/stylesheets/mobile.css" />
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+ 	<%= javascript_include_tag 'ejs' %>	
+  	<%= javascript_include_tag 'application' %>
+	<link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 	
+  	<%= csrf_meta_tag %>
+</head>
+<body>
+
+	<%= yield%>
+
+	
+</body>
+</html>

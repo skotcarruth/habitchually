@@ -1,15 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @habit.name %>
-</p>
-
-<p>
-  <b>End date:</b>
-  <%= @habit.end_date %>
-</p>
-
-
-<%= link_to 'Edit', edit_habit_path(@habit) %> |
-<%= link_to 'Back', habits_path %>
+<div data-role="page" id="show"> 
+	<div data-role="header" data-theme="z">
+		<h1 class="ui-title" role="heading" ><%= @habit.name %></h1>	
+	</div> 
+	<div data-role="content" data-theme="d">
+			<h2><%= @habit.name %></h2>
+			<h5 id="goal">Goal: 7 Days</h5>
+			
+			<button>I Did This</button>
+	</div>
+	<div data-role="content" data-theme="c">
+		<h3>Progress for this goal:</h3>
+		
+		<div class="progress-bar">
+			
+		</div>
+	</div>	
+</div>

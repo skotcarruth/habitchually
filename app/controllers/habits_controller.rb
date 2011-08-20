@@ -1,5 +1,7 @@
 class HabitsController < ApplicationController
 
+  layout 'mobile'
+
   def index
     @habits = Habit.all
 
@@ -14,7 +16,7 @@ class HabitsController < ApplicationController
 
     respond_to do |format|
       format.html 
-      format.xml  { render :xml => @habit }
+      format.json  { render :json => @habit }
     end
   end
 
@@ -23,7 +25,7 @@ class HabitsController < ApplicationController
 
     respond_to do |format|
       format.html 
-      format.xml  { render :xml => @habit }
+      format.json  { render :json => @habit }
     end
   end
 
@@ -32,15 +34,16 @@ class HabitsController < ApplicationController
   end
 
   def create
-    @habit = Habit.new(params[:habit])
-
+    p = params[:habit][0]
+    @habit = Habit.new({ :name => p[:name] })  
     respond_to do |format|
       if @habit.save
         format.html { redirect_to(@habit, :notice => 'Habit was successfully created.') }
-        format.xml  { render :xml => @habit, :status => :created, :location => @habit }
+        format.json  do
+          render :json => { :data => @habit }
+        end
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @habit.errors, :status => :unprocessable_entity }
+      
       end
     end
   end

@@ -1,0 +1,44 @@
+.ui-header {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#438aba', endColorstr='#0271bb');
+	background: -webkit-gradient(linear, left top, left bottom, from(#438aba), to(#0271bb));
+	background: -moz-linear-gradient(top,  #438aba,  #0271bb);	
+	background-color : #438aba !important;
+	border-top: 1px solid #bcd5e6;
+}
+
+
+
+
+#add-btn {
+	padding: 0 !important;
+	background: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;	
+}
+
+#add-btn .ui-btn-inner {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+#habit-index-list h4 {
+	font-size: 22px;
+	text-transform: capitalize;
+}
+
+#habit-index-list p {
+	color: #999;
+	font-size: 18px;
+}
+
+
+.white-content {
+	background-color: #FFF;
+}
+
+.progress-bar {
+	height: 28px;
+	background: url(/images/progress_bg.png) top left repeat-x;
+	width: 100%;
+}

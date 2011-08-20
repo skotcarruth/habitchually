@@ -1,5 +1,7 @@
 Habittracker::Application.routes.draw do
   resources :habits
+  
+  match "/habits/.:format" => "habits#create", :method => :post
 
   root :to => "habits#index"
 
