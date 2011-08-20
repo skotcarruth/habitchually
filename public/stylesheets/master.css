@@ -6,33 +6,6 @@
 	border-top: 1px solid #bcd5e6;
 }
 
-
-
-
-#add-btn {
-	padding: 0 !important;
-	background: none !important;
-	-moz-box-shadow: none !important;
-	-webkit-box-shadow: none !important;
-	box-shadow: none !important;	
-}
-
-#add-btn .ui-btn-inner {
-	margin: 0 !important;
-	padding: 0 !important;
-}
-
-#habit-index-list h4 {
-	font-size: 22px;
-	text-transform: capitalize;
-}
-
-#habit-index-list p {
-	color: #999;
-	font-size: 18px;
-}
-
-
 .white-content {
 	background-color: #FFF;
 }
