@@ -1,5 +1,5 @@
 #progress-bar {
-	height: 40px;
+	height: 26px;
 	background: url(/images/progress-cont-bg.png) top left repeat-x;
 	width: 100%;
 	overflow: hidden;
@@ -9,7 +9,7 @@
 }
 
 #progress {
-	height: 40px;
+	height: 26px;
 	background: url(/images/progress_bg.png) top left repeat-x;
 	width: 100%;
 	-moz-border-radius: 				15px !important;
@@ -19,9 +19,7 @@
 
 #habit-index-list p {
 	font-size: 15px;
-	margin-top: -14px;
 	color: #AAA;
-	float: right;
 }
 
 #habit-index-list, .ui-listview {
@@ -58,7 +56,7 @@
 .small-progress-bar {
 	height: 10px;
 	background: url(/images/progress-cont-bg.png) top left repeat-x;
-	width: 70%;
+	width: 100%;
 	overflow: hidden;
 	-moz-border-radius: 				15px !important;
 	-webkit-border-radius: 				15px !important;
@@ -94,9 +92,9 @@
 
 .ui-bar-a .ui-btn {
 	border: 0;
-		-moz-box-shadow: 		none;
-		-webkit-box-shadow: 	none;
-		box-shadow:			none;
+	-moz-box-shadow: 		none;
+	-webkit-box-shadow: 	none;
+	box-shadow:			none;
 }
 
 .day-label {
@@ -109,12 +107,13 @@
 
 }
 
+
 #habit-days-field {
 	width: 60px;
 }
 
 #habit-name-field {
-	width: 150px;
+	width: 200px;
 }
 
 .adlib-title {

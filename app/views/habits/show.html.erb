@@ -3,10 +3,11 @@
 		<h1 class="ui-title" role="heading" ><img src="/images/logo.png" /></h1>
 	</div> 
 	<div data-role="content" data-theme="d">
-			<h2><%= @habit.name %></h2>
-			<h4 id="goal-label">Goal: <%= @habit.days %> <%= @habit.days == 1 ? "Day" : "Days" %></h4>
+
+			<h2>I will <%= @habit.name %> for <%= @habit.days %> <%= @habit.days == 1 ? "Day" : "Days" %></h2>
+			<p>Streak : <%= @habit.checkins.length %></p>
 			
-			<button data-habit-id="<%= @habit.id %>" class="checkin-btn" data-theme="e">I Did This!</button>
+			<button id="checkin-btn" data-habit-id="<%= @habit.id %>" class="checkin-btn" data-theme="e">I Did This!</button>
 			
 			<h3>Progress for this goal:</h3>
 			<div id="progress-bar">
@@ -30,7 +31,7 @@
 				var id = $(this).attr('data-habit-id');
 				$.post('/habits/'+id+'/checkin', function(data) {
 					if ( data.status == 202 ) {
-						_this.parent().find('.ui-btn-text').text("Completed!");
+						_this.parent().find('.ui-btn-text').text("I did this today!");
 						_this.parent().addClass('checked-in');
 						$("#progress").animate({
 							width : "30%"
