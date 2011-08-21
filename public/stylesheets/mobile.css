@@ -511,7 +511,9 @@
 .ui-btn-up-e {
 	border: 1px solid 		#F7C942;
 	background: 			#fadb4e;
+	font-size: 24px;
 	font-weight: bold;
+	border-radius: 10px !important;
 	color: 					#333;
 	text-shadow: 0 1px 0 	#fff;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#fceda7), to(#fadb4e)); /* Saf4+, Chrome */
@@ -525,6 +527,8 @@
 	color: 					#333;
 }
 .ui-btn-hover-e {
+	border-radius: 10px !important;	
+	font-size: 24px;	
 	border: 1px solid 		#e79952;
 	background: 			#fbe26f;
 	font-weight: bold;
@@ -1673,8 +1677,8 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 }
 
 .ui-body-z {
-	border: 1px solid 		#C6C6C6;
-	background: 			#cccccc;
+	border: 1px solid 		#002138;
+	background: 			#003254 !important;
 	color: 					#333333;
 	text-shadow: 0 1px 0 	#fff;
 	font-weight: normal;
@@ -1760,7 +1764,19 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 
 .ui-bar-z h1 {
 	font-family: Chunk;
+
 	font-weight: normal;
 	margin: .6em 90px .5em !important;
 	font-size: 22px !important;
+}
+
+.ui-body-z h1 {
+	text-transform: capitalize;	
+	text-shadow: 0 -1px 0 #000 ;
+	color: #FFF;
+}
+
+.ui-body-z h4 {
+	color: #99999a;
+	text-shadow: 0 -1px 0 #111;	
 }

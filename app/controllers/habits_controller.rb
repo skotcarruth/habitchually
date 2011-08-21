@@ -5,28 +5,29 @@ class HabitsController < ApplicationController
   def index
     @habits = Habit.all
 
-    respond_to do |format|
-      format.html
-      format.json  { render :json => @habits }
+  end
+  
+  def checkin
+    @habit = Habit.find(params[:id])
+    s = Date.today.beginning_of_day 
+    e = Date.today.end_of_day
+    if @habit.can_checkin?(s,e)
+      p 'yes'
+      Checkin.create(:habit_id => @habit.id)
+      render :json => { :status => 202 }
+    else
+      p 'no'
+      render :json => { :status => 401 }  
     end
   end
 
   def show
     @habit = Habit.find(params[:id])
 
-    respond_to do |format|
-      format.html 
-      format.json  { render :json => @habit }
-    end
   end
 
   def new
     @habit = Habit.new
-
-    respond_to do |format|
-      format.html 
-      format.json  { render :json => @habit }
-    end
   end
 
   def edit
@@ -35,15 +36,8 @@ class HabitsController < ApplicationController
 
   def create
     @habit = Habit.new(params[:habit])  
-    respond_to do |format|
-      if @habit.save
-        format.html { redirect_to(@habit, :notice => 'Habit was successfully created.') }
-        format.json  do
-          render :json => { :data => @habit }
-        end
-      else
-      
-      end
+    if @habit.save
+      redirect_to @habit, :notice => 'Habit was successfully created.'
     end
   end
 
@@ -64,10 +58,7 @@ class HabitsController < ApplicationController
   def destroy
     @habit = Habit.find(params[:id])
     @habit.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(habits_url) }
-      format.xml  { head :ok }
-    end
+    redirect_to(habits_url) 
+    
   end
 end

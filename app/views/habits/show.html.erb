@@ -1,19 +1,27 @@
-<div data-role="page" id="show"> 
+<div data-role="page" id="show" data-theme="d"> 
 	<div data-role="header" data-theme="z">
 		
-		<h1 class="ui-title" role="heading" ><%= @habit.name %></h1>	
+		<h1 class="ui-title" role="heading" >Habit Details</h1>	
 	</div> 
-	<div data-role="content" data-theme="d">
-			<h2><%= @habit.name %></h2>
-			<h5 id="goal">Goal: 7 Days</h5>
+	<div data-role="content" data-theme="z">
+			<h1><%= @habit.name %></h1i>
+			<h4>Goal: <%= @habit.streek %> <%= @habit.streek == 1 ? "Day" : "Days" %></h4>
 			
-			<button>I Did This</button>
+			<button data-habit-id="<%= @habit.id %>" class="checkin-btn" data-theme="e">I Did This!</button>
 	</div>
-	<div data-role="content" data-theme="c">
+	<div data-role="content" data-theme="d">
 		<h3>Progress for this goal:</h3>
 		
 		<div class="progress-bar">
-			
+			<div style="width: 20%" class="progress"></div>
 		</div>
 	</div>	
+	<script type="text/javascript" charset="utf-8">
+		$('.checkin-btn').click(function() {
+			var id = $(this).attr('data-habit-id');
+			$.post('/habits/'+id+'/checkin', function() {
+				alert('s')
+			});
+		});
+	</script>
 </div>
