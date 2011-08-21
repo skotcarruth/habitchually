@@ -110,7 +110,11 @@
 }
 
 #habit-days-field {
-	width: 80px;
+	width: 60px;
+}
+
+#habit-name-field {
+	width: 150px;
 }
 
 .adlib-title {

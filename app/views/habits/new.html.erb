@@ -27,7 +27,7 @@
 	</div>
 	
 	<div data-role="footer" class="ui-bar" data-theme="a" data-position="fixed" >
-		<a class="habits" href="/habits">Habits</a>
+		<a class="habits" href="/habits <% 'selected' if cur_host.include? "/habits"  %>">Habits</a>
 		<a class="challenge" href="#">Challenge</a>
 		<a class="profile" href="#">Profile</a>
 		<a class="settings" href="settings">Settings</a>						
