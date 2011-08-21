@@ -6,7 +6,7 @@ Habittracker::Application.routes.draw do
   end
   
   
-  match "/home" => "home#index"
+  match "/" => "home#index"
   
   match "/habits/.:format" => "habits#create", :method => :post
 
