@@ -34,8 +34,7 @@ class HabitsController < ApplicationController
   end
 
   def create
-    p = params[:habit][0]
-    @habit = Habit.new({ :name => p[:name] })  
+    @habit = Habit.new(params[:habit])  
     respond_to do |format|
       if @habit.save
         format.html { redirect_to(@habit, :notice => 'Habit was successfully created.') }

@@ -4,13 +4,25 @@
 				
 	</div> 
 	<div data-role="content">	
+		
+		<form action="/habits" method="post" name="habit" id="new_habit_form">
+		
 		<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
 	        <label for="name" class="ui-input-text">Habit Name:</label>
-	        <input type="text" name="name" id="name" value="" class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c">
+	        <input type="text" name="habit[name]" id="habit-name-field"  class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c">
 		</div>
 		<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-	        <label for="name" class="ui-input-text"># of Days:</label>
-	        <input type="text" name="days" id="days" value="" class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c">
-		</div>		
+	        <label for="days" class="ui-input-text"># of Days:</label>
+	        <input type="text" name="habit[days]" id="habit-days-field"  class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c">
+		</div>	
+
+
+			
+		<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+	   		<button id="add_habit">Add Habit</button>
+		</div>
+		
+		</form>
+				
 	</div>
 </div>

@@ -1761,6 +1761,6 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 .ui-bar-z h1 {
 	font-family: Chunk;
 	font-weight: normal;
-	margin-top: 15px !important;
+	margin: .6em 90px .5em !important;
 	font-size: 22px !important;
 }

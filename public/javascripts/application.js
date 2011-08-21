@@ -8,23 +8,12 @@ var Habitfil = {
 	loaded : false
 }
 
-Habitfil.views = {
+Habitfil.events = {
 
-	index : {
-		init : function() {
-			var _this = this;
-			$.get('/habits.json', function(data) {
-				_this.helpers.build_list(data);
-			});
-		},
-		
-		helpers : {
-			build_list : function(data) {
-				var habits = { habits : data },
-					html = new EJS({url: '/javascripts/templates/habit_list.ejs'}).render(habits);
-				$('#habit-index-list').append(html);
-			}
-		}
-	}	
+	setup_new_habit_form : function() {
+		$('#add_habit').click(function() {
+			$.post('/habits')
+		});
+	}
 	
 }
