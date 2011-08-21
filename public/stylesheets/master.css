@@ -25,6 +25,7 @@
 	float: right;
 }
 
+
 .ui-body-z .checked-in {
 	border: 1px solid  #2f5d20;
 	background: #478931 !important;
@@ -49,4 +50,25 @@
 	-moz-border-radius: 				15px !important;
 	-webkit-border-radius: 				15px !important;
 	border-radius: 						15px !important;					
+}
+
+
+#home-list #habits a {
+	background: #FFF url(/images/clock.png) 15px 18px no-repeat;
+	padding-left: 50px;
+}
+
+#home-list #profile a {
+	background: #FFF url(/images/user.png) 15px 18px no-repeat;
+	padding-left: 50px;
+}
+
+#home-list #challenge a {
+	background: #FFF url(/images/trophy.png) 15px 18px no-repeat;
+	padding-left: 50px;
+}
+
+#home-list #gear a {
+	background: #FFF url(/images/gear.png) 15px 18px no-repeat;
+	padding-left: 50px;
 }
