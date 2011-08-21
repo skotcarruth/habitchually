@@ -6,4 +6,8 @@ class HomeController < ApplicationController
     
   end
   
+  def test
+    redirect_to root_url
+  end
+  
 end

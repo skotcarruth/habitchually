@@ -1,6 +1,8 @@
 Habittracker::Application.routes.draw do
   
   
+  match '/test' => "home#test"
+  
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :habits do
