@@ -1,7 +1,7 @@
 <div data-role="page" id="new" data-theme="z" data-add-back-btn="true"> 
 	<div data-role="header" data-theme="z">
 		
-		<h1 class="ui-title" role="heading" >New Habit</h1>
+		<h1 class="ui-title" role="heading" ><img src="/images/logo.png" /></h1>
 				
 	</div> 
 	<div data-role="content" data-theme="c" >	
@@ -9,19 +9,28 @@
 		<form action="/habits" method="post" name="habit" id="new_habit_form">
 		
 		<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-	        <label for="name" class="ui-input-text">Habit Name:</label>
-	        <input type="text" name="habit[name]" id="habit-name-field"  class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c">
+	        <span class="adlib-title">I will</span>
+	        <input type="text" name="habit[name]" id="habit-name-field" placeholder="Walk for 20 Minutes"  class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c"> 
 		</div>
 		<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-	        <label for="days" class="ui-input-text"># of Days:</label>
-	        <input type="text" name="habit[days]" id="habit-days-field"  class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c">
+	        <span class="adlib-title">for</span>
+	        <input type="text" name="habit[days]" id="habit-days-field" placeholder="30"  class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c">
+			<span class="day-label">Days.</span>
 		</div>	
 			
 		<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-	   		<button id="add_habit" data-theme="b">Add Habit</button>
+	   		<button id="add_habit" data-theme="b">Commit to Habit</button>
 		</div>
 		
 		</form>
 				
 	</div>
+	
+	<div data-role="footer" class="ui-bar" data-theme="a" data-position="fixed" >
+		<a class="habits" href="/habits">Habits</a>
+		<a class="challenge" href="#">Challenge</a>
+		<a class="profile" href="#">Profile</a>
+		<a class="settings" href="settings">Settings</a>						
+	</div>	
+	
 </div>

@@ -1,6 +1,6 @@
 <div data-role="page" id="show" data-theme="z" data-add-back-btn="true"> 
 	<div data-role="header" data-theme="z">
-		<h1 class="ui-title" role="heading" >Habit Details</h1>	
+		<h1 class="ui-title" role="heading" ><img src="/images/logo.png" /></h1>
 	</div> 
 	<div data-role="content" data-theme="d">
 			<h2><%= @habit.name %></h2>
@@ -13,7 +13,15 @@
 				<div style="width: 20%" id="progress"></div>
 			</div>
 			
+			
 	</div>
+	
+	<div data-role="footer" class="ui-bar" data-theme="a" data-position="fixed">
+		<a class="habits" href="/habits">Habits</a>
+		<a class="challenge" href="#">Challenge</a>
+		<a class="profile" href="#">Profile</a>
+		<a class="settings" href="settings">Settings</a>						
+	</div>	
 
 	<script type="text/javascript" charset="utf-8">
 		$('.checkin-btn').click(function() {

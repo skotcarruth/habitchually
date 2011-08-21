@@ -19,12 +19,34 @@
 
 #habit-index-list p {
 	font-size: 15px;
-
 	margin-top: -14px;
 	color: #AAA;
 	float: right;
 }
 
+#habit-index-list, .ui-listview {
+	border: 0 !important;
+
+}
+
+#habit-index-list .ui-btn-text, #habit-index-list li, #habit-index-list .ui-btn {
+	background: none !important;	
+
+	border: 0 !important;
+}
+
+#habit-index-list .ui-btn-text {
+	border-top: 1px solid #DDD !important;
+}
+
+
+#habit-index-list li:first-child .ui-btn-text{
+	border: 0 !important;
+}
+
+.ui-bar {
+	text-align: center;
+}
 
 .ui-body-z .checked-in {
 	border: 1px solid  #2f5d20;
@@ -72,30 +94,51 @@
 
 .ui-bar-a .ui-btn {
 	border: 0;
-	box-shadow: none;
+		-moz-box-shadow: 		none;
+		-webkit-box-shadow: 	none;
+		box-shadow:			none;
+}
+
+.day-label {
+	margin-left: 10px;
+}
+
+*[placeholder] {
+	line-height: 20px !important;
+		font-style: italic !important;
+
+}
+
+#habit-days-field {
+	width: 80px;
+}
+
+.adlib-title {
+	display: inline-block;
+	width: 40px;
 }
 
 .ui-title {
-	height: 35px;
+
 	overflow: visible !important;
 }
 
-.ui-bar #challenge {
+.ui-bar .challenge {
 	background: url(/images/challenge.png) 25px 2px no-repeat;
 	padding-top: 35px !important;
 }
 
-.ui-bar #habits {
+.ui-bar .habits {
 	background: url(/images/habits.png) 15px 2px no-repeat;
 	padding-top: 35px !important;
 }
 
-.ui-bar #profile {
+.ui-bar .profile {
 	background: url(/images/profile.png) 13px 2px no-repeat;
 	padding-top: 35px !important;
 }
 
-.ui-bar #settings {
+.ui-bar .settings {
 	background: url(/images/settings.png) 15px 2px no-repeat;
 	padding-top: 35px !important;
 }

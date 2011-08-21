@@ -1,9 +1,9 @@
 <div data-role="page" id="index" class="custom-page" data-theme="z"> 
 	<div data-role="header" data-theme="z">
-		<h1 class="ui-title" role="heading" >My Habits</h1>
+		<h1 class="ui-title" role="heading" ><img src="/images/logo.png" /></h1>
 		<a href="/habits/new" class="ui-btn-right" data-icon="add"/>Add</a>			
 	</div> 
-	<div data-role="content" data-theme="z">	
+	<div data-role="content" data-theme="d">	
 		<ul data-role="listview" data-theme="index" id="habit-index-list">
 			<% @habits.each do |h|%>
 				<li>
@@ -17,5 +17,16 @@
 				</li>
 			<% end %>
 		</ul>
+		<% if @habits.empty? %>
+		asdas
+		<% end %>
 	</div>
+	
+	<div data-role="footer" class="ui-bar" data-theme="a" data-position="fixed" >
+		<a class="habits" href="/habits">Habits</a>
+		<a class="challenge" href="#">Challenge</a>
+		<a class="profile" href="#">Profile</a>
+		<a class="settings" href="settings">Settings</a>						
+	</div>	
+	
 </div>
