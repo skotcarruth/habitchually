@@ -4,9 +4,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # You need to implement the method below in your model
     @user = User.find_for_facebook_oauth(env["omniauth.auth"], current_user)
 
-    if @user 
+    if @user.persisted?
       p '----'*20 
-      redirect_to root_url, :event => :authentication
+      sign_in_and_redirect @user, :event => :authentication
     else
       session["devise.facebook_data"] = env["omniauth.auth"]
       redirect_to '/'
