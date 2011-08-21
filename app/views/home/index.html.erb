@@ -30,6 +30,7 @@
 
 <% else %>
 
-	<%= link_to 'Facebook', user_omniauth_authorize_path(:facebook) %> 
+	<%= link_to 'Facebook', user_omniauth_authorize_path(:facebook), :id => "facebook-login", :rel => "external" %> 
+
 
 <% end %>
