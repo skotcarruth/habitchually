@@ -1,0 +1,102 @@
+<div data-role="page" id="show" data-theme="z" data-add-back-btn="true"> 
+	<div data-role="header" data-theme="z">
+		<h1 class="ui-title" role="heading" ><img src="/images/logo.png" /></h1>
+	</div> 
+	<div data-role="content" data-theme="d">
+
+			<h2>Challenge: Start a new company every day</h2>
+			<p>Starts: 9/1/2011</p>
+			
+			<button id="checkin-btn" data-challenge-id="" class="checkin-btn" data-theme="e">Join this Challenge</button>
+			
+			<ul data-role="listview" data-theme="index" id="participants-list">
+
+				<li class="list-header">
+					<a href="#">
+						<img src="/images/profile-images/jono-2.jpg">
+						<div class="challenge-partcipant-text">
+							<h2>Jono O&rsquo;shea</h2>
+							<p>1,243 points</p>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<img src="/images/profile-images/jono-2.jpg">
+						<div class="challenge-partcipant-text">
+							<h2>Jono O&rsquo;shea</h2>
+							<p>1,243 points</p>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<img src="/images/profile-images/lin.jpg">
+						<div class="challenge-partcipant-text">
+							<h2>Lin Tam</h2>
+							<p>658 points</p>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<img src="/images/profile-images/ben.jpg">
+						<div class="challenge-partcipant-text">
+							<h2>Ben Tao</h2>
+							<p>544 points</p>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<img src="/images/profile-images/ted.jpg">
+						<div class="challenge-partcipant-text">
+							<h2>Ted Mui</h2>
+							<p>286 points</p>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<img src="/images/profile-images/skot.jpg">
+						<div class="challenge-partcipant-text">
+							<h2>Skot Carruth</h2>
+							<p>1 point</p>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+			
+	</div>
+	
+	<div data-role="footer" class="ui-bar" data-theme="a" data-position="fixed">
+		<a class="habits <% 'selected' if cur_host.include? "/habits"  %>" href="/habits">Habits</a>
+		<a class="challenge" href="/challenges">Challenge</a>
+		<a class="profile" href="#">Profile</a>
+		<a class="settings" href="settings">Settings</a>						
+	</div>	
+
+	<script type="text/javascript" charset="utf-8">
+		$('.checkin-btn').click(function() {
+			var _this = $(this);
+			if ( !_this.hasClass('checked-in') ) {
+				var id = $(this).attr('data-habit-id');
+				$.post('/habits/'+id+'/checkin', function(data) {
+					if ( data.status == 202 ) {
+						_this.parent().find('.ui-btn-text').text("I did this today!");
+						_this.parent().addClass('checked-in');
+						$("#progress").animate({
+							width : "30%"
+						}, 500);
+					}
+				});				
+			}
+		});
+	</script>
+</div>

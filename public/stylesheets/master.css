@@ -145,3 +145,21 @@
 	background: url(/images/settings.png) 15px 2px no-repeat;
 	padding-top: 35px !important;
 }
+
+
+/* challenges */
+.countdown-blue { color: #247eba; }
+
+#participants-list {}
+
+li.list-header {
+    background-color: #8fb9d6;
+    color: #043f67;
+    font-size: 14px;
+    border-top: 1px solid #849dac;
+    border-bottom: 1px solid #849dac;
+    height: 24px;
+}
+
+#participants-list img { float: left; }
+.challenge-participant-text { float: left; }

@@ -1,0 +1,47 @@
+<div data-role="page" id="index" class="custom-page" data-theme="z"> 
+	<div data-role="header" data-theme="z">
+		<h1 class="ui-title" role="heading" ><img src="/images/logo.png" /></h1>
+		<a href="#" class="ui-btn-right" data-icon="add"/>Add</a>			
+	</div>
+	<div data-role="content" data-theme="d">	
+		<ul data-role="listview" data-theme="index" id="challenge-index-list">
+
+			<li>
+				<a href="/challenges/1">
+					<h2>Make the bed</h2>
+					<p>Starts in <span class="countdown-blue">1 hour</span></p>
+				</a>
+			</li>
+
+			<li>
+				<a href="/challenges/1">
+					<h2>Not drink soda</h2>
+					<p>Starts in <span class="countdown-blue">7 hours</span></p>
+				</a>
+			</li>
+
+			<li>
+				<a href="/challenges/1">
+					<h2>Learn a word in Spanish</h2>
+					<p>Starts in 1 day, 4 hours</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="/challenges/1">
+					<h2>Start a company</h2>
+					<p>Starts in 4 days, 1 hour</p>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+	
+	<div data-role="footer" class="ui-bar" data-theme="a" data-position="fixed" >
+		<a class="habits <% 'selected' if cur_host.include? "/habits"  %>" href="/habits">Habits</a>
+		<a class="challenge" href="/challenges">Challenge</a>
+		<a class="profile" href="#">Profile</a>
+		<a class="settings" href="settings">Settings</a>						
+	</div>	
+	
+</div>
