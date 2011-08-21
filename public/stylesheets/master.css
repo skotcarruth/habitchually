@@ -3,12 +3,22 @@
 	background: url(/images/progress-cont-bg.png) top left repeat-x;
 	width: 100%;
 	overflow: hidden;
-	border-radius: 15px;	
+	-moz-border-radius: 				15px !important;
+	-webkit-border-radius: 				15px !important;
+	border-radius: 						15px !important;	
 }
 
 .progress {
 	height: 52px;
 	background: url(/images/progress_bg.png) top left repeat-x;
 	width: 100%;
-	border-radius: 15px;
+	-moz-border-radius: 				15px !important;
+	-webkit-border-radius: 				15px !important;
+	border-radius: 						15px !important;
+}
+
+#habit-index-list p {
+	font-size: 16px;
+	font-weight: bold;
+	color: #BBB;
 }

@@ -1,14 +1,14 @@
-<div data-role="page" id="index" class="custom-page"> 
+<div data-role="page" id="index" class="custom-page" data-theme="z"> 
 	<div data-role="header" data-theme="z">
 		<h1 class="ui-title" role="heading" >My Habits</h1>
 		<a href="/habits/new" class="ui-btn-right"/>Add</a>			
 	</div> 
 	<div data-role="content">	
-		<ul data-role="listview" data-theme="g" id="habit-index-list">
+		<ul data-role="listview" data-theme="index" id="habit-index-list">
 			<% @habits.each do |h|%>
 				<li>
 					<a href="/habits/<%= h.id %>">
-						<h4><%= h.name %></h4>
+						<h2><%= h.name %></h2>
 						<p>Streak: <%= h.streek %></p>
 					</a>
 				</li>
