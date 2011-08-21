@@ -79,3 +79,8 @@
 	background: url(/images/challenge.png) 25px 2px no-repeat;
 	padding-top: 35px !important;
 }
+
+.ui-bar #habits {
+	background: url(/images/habits.png) 15px 2px no-repeat;
+	padding-top: 35px !important;
+}
