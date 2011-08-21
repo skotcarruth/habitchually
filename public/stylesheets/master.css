@@ -57,6 +57,14 @@
 	text-shadow: none;
 }
 
+#login h1 {
+	text-align: center !important;
+}
+
+#login .ui-body-c {
+	background: #e4eaed !important;
+}
+
 #home-list #habits a {
 	background: #FFF url(/images/clock.png) 15px 18px no-repeat;
 	padding-left: 50px;
