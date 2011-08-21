@@ -7,7 +7,7 @@ class User::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_in_and_redirect '/', :event => :authentication
     else
       session["devise.facebook_data"] = env["omniauth.auth"]
-      redirect_to '/'
+      redirect_to '/s'
     end
   end  
   
