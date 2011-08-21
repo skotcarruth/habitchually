@@ -75,6 +75,11 @@
 	box-shadow: none;
 }
 
+.ui-title {
+	height: 35px;
+	overflow: visible !important;
+}
+
 .ui-bar #challenge {
 	background: url(/images/challenge.png) 25px 2px no-repeat;
 	padding-top: 35px !important;
