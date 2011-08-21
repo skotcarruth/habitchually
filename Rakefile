@@ -5,6 +5,4 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake/dsl_definition'
 require 'rake'
 
-include Rake::DSL if defined?(Rake::DSL)
-
 Habittracker::Application.load_tasks
