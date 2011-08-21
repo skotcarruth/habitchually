@@ -3,7 +3,7 @@ class HabitsController < ApplicationController
   layout 'mobile'
 
   def index
-    @habits = Habit.where(:user_id => current_user.id)
+    @habits = Habit.where(:user_id => 1) #current_user.id
   end
   
   def checkin
@@ -21,7 +21,7 @@ class HabitsController < ApplicationController
   end
 
   def show
-    @habit = Habit.find(params[:id]) if @habit.user_id == current_user.id
+    @habit = Habit.find(params[:id]) #if @habit.user_id == current_user.id
   end
 
   def new
@@ -34,7 +34,7 @@ class HabitsController < ApplicationController
 
   def create
     @habit = Habit.new(params[:habit])  
-    @habit.user_id = current_user.id
+    @habit.user_id =  1 #current_user.id
     if @habit.save
       redirect_to @habit, :notice => 'Habit was successfully created.'
     end

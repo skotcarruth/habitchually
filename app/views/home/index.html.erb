@@ -1,7 +1,7 @@
 
 
 
-<% if not current_user.nil? %>
+<% if true #not current_user.nil? %>
 
 
 <div data-role="page" id="ome" class="custom-page" data-theme="z"> 
@@ -10,21 +10,11 @@
 		<a href="#" class="ui-btn-right" data-icon=""/>Logout</a>			
 	</div> 
 	<div data-role="content" data-theme="z">	
-		<ul data-role="listview" data-theme="index" id="home-list">		
-			<li id="habits">
-				<a href="/habits"><h2> Habits</h2></a>
-			</li>
-			<li id="challenge">				
-				<a href="/social"><h2>Challenges</h2></a>	
-			</li>
-			<li id="profile">							
-				<a href="/profile"><h2> Profile</h2></a>		
-			</li>	
-			<li id="gear">							
-				<a href="/settings"><h2>Settings</h2></a>		
-			</li>						
-		</ul>
+
 	</div>
+	<div data-role="footer" class="ui-bar">
+		<a href="#"><img src="/images/habits.png"></a>
+	</div>	
 </div>
  
 
