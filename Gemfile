@@ -4,6 +4,9 @@ gem 'rails', '3.0.9'
 
 gem 'haml'
 
+gem 'devise'
+gem 'omniauth'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
