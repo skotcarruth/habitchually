@@ -1,9 +1,9 @@
 <div data-role="page" id="index" class="custom-page" data-theme="z"> 
 	<div data-role="header" data-theme="z">
 		<h1 class="ui-title" role="heading" >My Habits</h1>
-		<a href="/habits/new" class="ui-btn-right"/>Add</a>			
+		<a href="/habits/new" class="ui-btn-right" data-icon="add"/>Add</a>			
 	</div> 
-	<div data-role="content">	
+	<div data-role="content" >	
 		<ul data-role="listview" data-theme="index" id="habit-index-list">
 			<% @habits.each do |h|%>
 				<li>

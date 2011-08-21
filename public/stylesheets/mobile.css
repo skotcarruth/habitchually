@@ -1769,7 +1769,7 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 
 	font-weight: normal;
 	margin: .6em 90px .5em !important;
-	font-size: 22px !important;
+	font-size: 20px !important;
 }
 
 .ui-body-z h1 {
@@ -1815,6 +1815,6 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 
 
 .ui-btn-up-index .ui-li-heading, .ui-btn-down-index .ui-li-heading, .ui-btn-hover-index .ui-li-heading {
-	font-size: 20px;
+	font-size: 18px;
 	text-transform: uppercase;
 }

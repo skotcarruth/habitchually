@@ -1,9 +1,10 @@
-<div data-role="page" id="new"> 
+<div data-role="page" id="new" data-theme="z" data-add-back-btn="true"> 
 	<div data-role="header" data-theme="z">
+		
 		<h1 class="ui-title" role="heading" >New Habit</h1>
 				
 	</div> 
-	<div data-role="content">	
+	<div data-role="content" data-theme="c" >	
 		
 		<form action="/habits" method="post" name="habit" id="new_habit_form">
 		
@@ -15,8 +16,6 @@
 	        <label for="days" class="ui-input-text"># of Days:</label>
 	        <input type="text" name="habit[streek]" id="habit-days-field"  class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c">
 		</div>	
-
-
 			
 		<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
 	   		<button id="add_habit">Add Habit</button>
