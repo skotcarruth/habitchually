@@ -2,7 +2,7 @@ class CreateHabits < ActiveRecord::Migration
   def self.up
     create_table :habits do |t|
       t.string :name
-      t.integer :streek, :default => 0
+      t.integer :days, :default => 0
       t.timestamps
     end
   end

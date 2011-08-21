@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20110820153640) do
 
   create_table "habits", :force => true do |t|
     t.string   "name"
-    t.integer  "streek",     :default => 0
+    t.integer  "days",       :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

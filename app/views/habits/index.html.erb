@@ -9,7 +9,10 @@
 				<li>
 					<a href="/habits/<%= h.id %>">
 						<h2><%= h.name %></h2>
-						<p>Streak: <%= h.streek %></p>
+						<div class="small-progress-bar">
+							<div style="width: 20%" class="small-progress"></div>
+						</div>
+						<p>Streak: <%= h.checkins.length %> / <%= h.days %></p>
 					</a>
 				</li>
 			<% end %>

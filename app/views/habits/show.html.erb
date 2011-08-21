@@ -1,27 +1,34 @@
 <div data-role="page" id="show" data-theme="d" data-add-back-btn="true"> 
 	<div data-role="header" data-theme="z">
-		
 		<h1 class="ui-title" role="heading" >Habit Details</h1>	
 	</div> 
 	<div data-role="content" data-theme="z">
 			<h1><%= @habit.name %></h1i>
-			<h4>Goal: <%= @habit.streek %> <%= @habit.streek == 1 ? "Day" : "Days" %></h4>
+			<h4>Goal: <%= @habit.days %> <%= @habit.days == 1 ? "Day" : "Days" %></h4>
 			
 			<button data-habit-id="<%= @habit.id %>" class="checkin-btn" data-theme="e">I Did This!</button>
 	</div>
 	<div data-role="content" data-theme="d">
 		<h3>Progress for this goal:</h3>
-		
-		<div class="progress-bar">
-			<div style="width: 20%" class="progress"></div>
+		<div id="progress-bar">
+			<div style="width: 20%" id="progress"></div>
 		</div>
 	</div>	
 	<script type="text/javascript" charset="utf-8">
 		$('.checkin-btn').click(function() {
-			var id = $(this).attr('data-habit-id');
-			$.post('/habits/'+id+'/checkin', function() {
-				alert('s')
-			});
+			var _this = $(this);
+			if ( !_this.hasClass('checked-in') ) {
+				var id = $(this).attr('data-habit-id');
+				$.post('/habits/'+id+'/checkin', function(data) {
+					if ( data.status == 202 ) {
+						_this.parent().find('.ui-btn-text').text("Completed!");
+						_this.parent().addClass('checked-in');
+						$("#progress").animate({
+							width : "30%"
+						}, 500);
+					}
+				});				
+			}
 		});
 	</script>
 </div>

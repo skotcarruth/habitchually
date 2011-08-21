@@ -1,5 +1,5 @@
-.progress-bar {
-	height: 52px;
+#progress-bar {
+	height: 40px;
 	background: url(/images/progress-cont-bg.png) top left repeat-x;
 	width: 100%;
 	overflow: hidden;
@@ -8,8 +8,8 @@
 	border-radius: 						15px !important;	
 }
 
-.progress {
-	height: 52px;
+#progress {
+	height: 40px;
 	background: url(/images/progress_bg.png) top left repeat-x;
 	width: 100%;
 	-moz-border-radius: 				15px !important;
@@ -20,5 +20,33 @@
 #habit-index-list p {
 	font-size: 14px;
 	font-weight: bold;
+	margin-top: -14px;
 	color: #BBB;
+	float: right;
+}
+
+.ui-body-z .checked-in {
+	border: 1px solid  #2f5d20;
+	background: #478931 !important;
+	color: #FFF !important;
+	text-shadow: 0 -1px 0 #222;
+}
+
+.small-progress-bar {
+	height: 10px;
+	background: url(/images/progress-cont-bg.png) top left repeat-x;
+	width: 70%;
+	overflow: hidden;
+	-moz-border-radius: 				15px !important;
+	-webkit-border-radius: 				15px !important;
+	border-radius: 						15px !important;	
+}
+
+.small-progress {
+	height: 10px;
+	background: url(/images/progress_bg.png) top left repeat-x;
+	width: 100%;
+	-moz-border-radius: 				15px !important;
+	-webkit-border-radius: 				15px !important;
+	border-radius: 						15px !important;					
 }

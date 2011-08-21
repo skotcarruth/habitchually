@@ -13,7 +13,7 @@ class HabitsController < ApplicationController
     e = Date.today.end_of_day
     if @habit.can_checkin?(s,e)
       p 'yes'
-      Checkin.create(:habit_id => @habit.id)
+      #Checkin.create(:habit_id => @habit.id)
       render :json => { :status => 202 }
     else
       p 'no'
