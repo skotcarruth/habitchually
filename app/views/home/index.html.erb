@@ -1,7 +1,9 @@
-<%= link_to 'Facebook', user_omniauth_authorize_path(:facebook) %>
 
 
-<!--
+
+<% if current_user %>
+
+
 <div data-role="page" id="ome" class="custom-page" data-theme="z"> 
 	<div data-role="header" data-theme="z">
 		<h1 class="ui-title" role="heading" >Habitful</h1>
@@ -24,4 +26,10 @@
 		</ul>
 	</div>
 </div>
- -->
+ 
+
+<% else %>
+
+	<%= link_to 'Facebook', user_omniauth_authorize_path(:facebook) %> 
+
+<% end %>

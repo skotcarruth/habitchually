@@ -52,6 +52,10 @@
 	border-radius: 						15px !important;					
 }
 
+#goal-label {
+	color: #AAA;
+	text-shadow: none;
+}
 
 #home-list #habits a {
 	background: #FFF url(/images/clock.png) 15px 18px no-repeat;
