@@ -65,22 +65,17 @@
 	background: #e4eaed !important;
 }
 
-#home-list #habits a {
-	background: #FFF url(/images/clock.png) 15px 18px no-repeat;
-	padding-left: 50px;
+.ui-bar-a .ui-btn-inner {
+	border: 0;
+	color: #999;
 }
 
-#home-list #profile a {
-	background: #FFF url(/images/user.png) 15px 18px no-repeat;
-	padding-left: 50px;
+.ui-bar-a .ui-btn {
+	border: 0;
+	box-shadow: none;
 }
 
-#home-list #challenge a {
-	background: #FFF url(/images/trophy.png) 15px 18px no-repeat;
-	padding-left: 50px;
-}
-
-#home-list #gear a {
-	background: #FFF url(/images/gear.png) 15px 18px no-repeat;
-	padding-left: 50px;
+.ui-bar #challenge {
+	background: url(/images/challenge.png) 25px 2px no-repeat;
+	padding-top: 35px !important;
 }
