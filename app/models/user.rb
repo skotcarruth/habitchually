@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
     if user = User.find_by_email(data["email"])
       user
     else # Create a user with a stub password. 
-      User.create!(:first_name => data['first_name'], :last_name => data['last_name'], :email => data["email"], :password => Devise.friendly_token[0,20], :avatar => open(img)) 
+      User.create!(:first_name => data['first_name'], :last_name => data['last_name'], :email => data["email"], :password => Devise.friendly_token[0,20]) 
     end
   end
   
