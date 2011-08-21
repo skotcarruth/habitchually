@@ -84,3 +84,13 @@
 	background: url(/images/habits.png) 15px 2px no-repeat;
 	padding-top: 35px !important;
 }
+
+.ui-bar #profile {
+	background: url(/images/profile.png) 13px 2px no-repeat;
+	padding-top: 35px !important;
+}
+
+.ui-bar #settings {
+	background: url(/images/settings.png) 15px 2px no-repeat;
+	padding-top: 35px !important;
+}
